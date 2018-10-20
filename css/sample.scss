@@ -1,6 +1,7 @@
 @charset "utf-8";
 // cd shopping-site
 // sass --watch --compass css/sample.scss:css/sample.css
+//  まとめてプログラムの行を整理したい時は( Windows: Ctrl+Shift+F,) を押すとスッキリします。
 
 html {
 font-size: 62.5%;
@@ -13,6 +14,7 @@ body
     line-height: 1.6;
     letter-spacing: .1em;
     color: #4c4c4c;
+    background:#F8F7F5;
     //background-color: #F4F5EF;/* 落ち着いた色               Cloud9の背景*/
 }
 
@@ -308,13 +310,45 @@ header{
                                   }
                                 
                               }    
+               
+                        }
+                        .recent_pro_pc{
+                                
+    
+                            
+                            background-image: url("../images/list/recent_pro_pc.png");
+                                                              
+                                  width: 100%;
+                                  height: 50px;
+                                  background-size: auto;
+                                  background-position: center center;
+                                  background-repeat: no-repeat;
+                                
+                              @media (max-width: 550px) {
+                                
                                   
                                 
+                                   background-image: url("../images/list/title_recent_pro.png"); 
+                                  
+                                  width: 100%;
+                                  height: 50px;
+                                  background-size: auto;
+                                  background-position: center center;
+                                  background-repeat: no-repeat;
+                                  @media screen and (-webkit-min-device-pixel-ratio:2),
+                                                    (min-resolution: 2dppx){
                                 
-                          
-                  
+                                    background-image: url("../images/list/title_recent_pro@2x.png");
+                                    width: 100%;
+                                    height: 50px;
+                                    background-size: auto;
+                                    background-position: center center;
+                                    background-repeat: no-repeat;
+                                  }
+                                
+                              }    
+               
                         }
-                        
                         
                
                      .newitems-boxs{
@@ -440,35 +474,45 @@ header{
                           
                   
                         }
+                        
                         .shopping-guide-boxs{
+                          
                           width: 100%; /* sectionの中のインナーボックスをウィンドウ幅に対して90%に */
                           
                           display: -webkit-flex;
                           display:         flex;
                       
                           justify-content: space-between;
+                          -webkit-box-sizing: border-box;
+                                   -moz-box-sizing: border-box;
+                                        box-sizing: border-box;
+                                        
                           @media (max-width: 550px) {
                             display: block;
                           }
                           
                           .shopping-guide-box
                             {
+                               margin: 10px;
+                                //padding: 5px;
                                 -webkit-box-sizing: border-box;
                                    -moz-box-sizing: border-box;
                                         box-sizing: border-box;
                                 -webkit-flex: 1;
                                         flex: 1;
-                                margin: 0px 10px;
-                                padding: 20px;
+                                //margin: 0px 10px;
+                                padding: 2%;
                             
                                 -webkit-border-radius: 4px;
                                    -moz-border-radius: 4px;
                                         border-radius: 4px;
                                 background-color: #ffffff;
                                 
-                               
-                                .otodoke-img-2 {
+                                img {
                                     width: 100%;
+                                }
+                                .otodoke-img {
+                                    width: 50%;
                                 }
                                 i
                                   {
@@ -551,18 +595,30 @@ header{
                     height: 50px;
                     margin: 5px 0;
                     background: #857E6B;
-                    .ipagelink-box-a{
-                      display: block;
-                    }
+                    
+                  	display: -webkit-flex;
+                    display:         flex;
+                    flex-wrap: nowrap;
+                      
+                    //justify-content: space-between;
+                    //align-items: center;
+                  	//-webkit-justify-content: space-between;　/*space-between：両端揃えで、子要素間の余白を均等にしてくれる。*/
+                  	justify-content: space-between;
+                  	//-webkit-align-items: center;
+                  	align-items: center;
+                    
+                    
                     .ipagelink-box-font{
-                      float: left;
-                      margin: 15px;
+                      width: 90%;
+                      padding: 0 0 0 10px;
+                     
+                      
                       
                     }
                     
                     .ipagelink-box-icon{
-                      float: right;
-                      margin: 15px;
+                      width: 10%;
+                      padding: 0 10px 0 0;
                       
                     }
                   }
@@ -580,18 +636,28 @@ header{
                 }
                 .about-box{
                   padding: 10px;
-                  .about-img{
-                    width: 100%;
+                  -webkit-box-sizing: border-box;
+                 -moz-box-sizing: border-box;
+                  box-sizing: border-box;
+                  img{
+                      width: 100%;
+                    }
+                  .about-font{
+                      padding: 10px;
+                      -webkit-box-sizing: border-box;
+                     -moz-box-sizing: border-box;
+                      box-sizing: border-box;
+                      
+                    
+                    .more_btn{
+                      display:block;
+                      text-align: center;
+                      margin: 10px;
+                      
+                      
+                      
+                    }
                   }
-                  .more_btn{
-                    display:block;
-                    text-align: center;
-                    margin: 10px;
-                    
-                    
-                    
-                  }
-                  
                 }
                 @media (max-width: 550px){
                   .about-box{
@@ -709,9 +775,270 @@ header{
     
 }
 
+/**************************************/
+/*  products */
+/**************************************/
+.pankuzu{
+   background: #E8E4D9;
+   padding: 5px;
 
-
-
-
+  .home_icon{
+                       display: block;
+                       float: left;
+                       padding: 0 5px;
+  }
+}
+.shousai{
+    width: 100%;
+    padding: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #ffffff;
+    
+    .product_box{
+      //display: flex;
+      width: 100%;
+      height: 30px;
+      border-bottom: 1px solid #897966;
+      
+      .product_name{
+        //display: block;
+        float: left;
+        //width: 80%;
+        font-weight: bold;
+        @media (max-width: 550px){
+           width: 100%;
+                                        
+        }
         
+      }
+      .product_num{
+        width: 20%;
+        @media (max-width: 550px){
+           width: 100%;
+                                        
+        }
+       // display: block;
+        float: right;
+        
+      }
+      @media (max-width: 550px){
+           display: block;
+                                        
+      }
+      
+    }
+    .product_pic{
+      padding: 30px 0;
+      width: 100%;
+      height: 420px;
+      border-bottom: 1px solid #897966;
+      .pic_main{
+          width: 71%;
+          float: left;
+          //background: #777777;
+          img{
+            width: 100%;
+          }
           
+      }
+      .pic_sides{
+          width: 29%;
+          float: right;
+          //background: #444444;
+          .pic_side{
+          width: 50%;
+          float: left;
+          padding-left: 5px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+            img{
+              width: 100%;
+            }
+          
+          }
+      }
+      
+    }
+    .color-size{
+        width: 100%;
+        margin: 20px 0;
+        //border-bottom: 1px solid #897966;
+        
+       .t-body{
+          width: 100%;
+          margin: 20px 0;
+          text-align: center;
+          .t-cell{
+            padding: 5px;
+            border: 1px solid #897966;
+          }
+          .t-size1{
+            width: 30%;
+          }
+          .t-size2{
+            width: 35%;
+          }
+          .t-color{
+             background: #E8E4D9;
+          }
+        }
+        .price-quantity{
+          display: flex;
+          .price-quantity-b{
+            width: 60%;
+          }
+          .form-list{
+            
+          	//margin-bottom: 40px;
+          	//padding-left: 0;
+          	.form-item{
+          	  height: 60px;
+            	//display: -webkit-flex;
+            	display: flex;
+            	//-webkit-flex-wrap:wrap;
+            	//flex-wrap:wrap;
+            	//margin: 0;
+            	//padding: 0 0 24px;
+            	align-items:  center;
+            	-webkit-align-items: center;
+            	border-top: 1px solid #897966;
+            	@media (max-width: 550px){
+                 display: block;
+                                              
+              }
+            	.form-label{
+            	  width: 40%;
+            	  @media (max-width: 550px){
+                 width: 100%;
+                                              
+                }
+                //flex: 1 1 auto;
+              }
+              
+              .form-detail{
+                width: 60%;
+              	//flex: 0 0 328px;
+              	//color: #ffffff;
+                span{
+            	    color: red;
+            	    //font: 20pxs;
+            	     //font-weight: bold;
+            	    .font-size{
+            	      font: 20px;
+            	      font-weight: bold;
+            	    }
+            	  }
+            	  @media (max-width: 550px){
+                 width: 100%;
+                                              
+                }
+              }
+            	
+            }
+          }
+          
+          
+          
+          .cart-btn{
+              width: 40%;
+              img{
+                width: 100%;
+	              height: auto;
+              }
+          }
+        }
+        .product_setu{
+          padding: 20px 0;
+          .product_setu-title{
+            border-bottom: 1px solid #897966;
+            padding: 5px 0;
+          }
+          .product_setu-title{
+            border-bottom: 1px solid #897966;
+            padding: 5px 0;
+          }
+          .product_setu-sav{
+            padding: 5px 0;
+          }
+        }
+        .product-t-body{
+          width: 100%;
+          //text-align: center;
+          border: 1px solid #897966;
+          margin-top: 5px;
+          .text-tr{
+            padding: 5px;
+            
+          }
+          th{
+              background: #E8E4D9;
+              text-align: center;
+              padding: 5px;
+              width: 30%;
+              border: 1px solid #897966;
+          }
+          td{
+            width: 70%;
+            padding: 5px;
+            border: 1px solid #897966;
+          }
+          
+        }
+        
+    }
+    
+    
+}
+
+/**************************************/
+/* list */
+/**************************************/
+.cate_image{
+  width: 100%;
+  img{
+    width: 100%;
+    height: auto;
+    //height: 50px;
+    
+  }
+
+}
+.button-aria{
+  width: 100%;
+  margin: 10px 0;
+  height: 50px;
+  a{
+    display: block;
+  }
+      .button{
+          margin: auto;
+          text-align: center;
+          padding: 5px 0;
+          width: 180px;
+          display: block;
+          color: #FFF;
+          font-weight: bold;
+          background-color: #857E6B;
+          //-moz-border-radius: 4px;
+          //-webkit-border-radius: 4px;
+          //border-radius: 4px;
+          font-size: 1rem;
+          text-transform: uppercase;
+        }
+        .button-back{
+          float: left;
+        }
+        .button-next{
+          float: right;
+        }
+        .button::after {
+          content: '';
+          display: block;
+          clear: both; 
+          
+        }
+}
+
